@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .container(style='margin-top: 150px;')
+    .row
+      form.form-horizontal(method='POST')
+        input(type='hidden', name='_csrf')
+        .form-group
+          label.col-sm-3.control-label(for='email') Email
+          .col-sm-7
+            input#email.form-control(type='email', name='email', placeholder='email', autofocus='autofocus', required='required')
+        .form-group
+          .col-sm-offset-3.col-sm-7
+            button.col-sm-3.btn.btn-primary(type='submit')
+              i.fa.fa-user
+              | Submit          
